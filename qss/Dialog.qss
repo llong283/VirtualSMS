@@ -1,0 +1,95 @@
+QDialog {
+	border-image: url(:/pic/Background.png);
+}
+QDialog#DialogChatRoom {
+	/*background-color: rgb(240, 247, 250);*/
+	border-image: url(:/pic/Background-Chat.png);
+}
+
+QWidget#tabPersonalInfo, #tabFilter, #tabOther, #tabIdentification {
+	border-image: url(:/pic/Background.png);
+}
+
+QTabBar::tab {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 rgb(250, 252, 254), stop: 0.4 rgb(236, 245, 254),
+                                stop: 0.5 rgb(211, 232, 254), stop: 1.0 rgb(237, 245, 254));
+    border-bottom-color: white;
+    border: 1px solid green;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    min-width: 60px;
+    height: 20px;
+    padding: 2px;
+}
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+}
+QTabBar::tab:selected {
+    border-color: rgb(50, 152, 254);
+    border-bottom-color: white;
+}
+QTabBar::tab:!selected {
+    margin-top: 2px;
+}
+
+QPushButton {
+	min-width: 65px;
+	height: 22px;
+	border-radius: 2px;
+	border-image: url(:/pic/btn.png);
+}
+QPushButton:hover {
+	border-image: url(:/pic/btn-hover.png);
+}
+QPushButton:pressed {
+	border-image: url(:/pic/btn-pressed.png);
+	padding: 0 -2px -2px 0;
+}
+QPushButton:disabled {
+    background-color: rgb(245, 244, 234);
+    color: rgb(118, 116, 108);
+    border: 2px groove;
+	border-image: url();
+    border-color: rgb(201, 199, 186);
+}
+
+QListView {
+	/*border: 0px;
+	show-decoration-selected: 1;*/
+}
+QListView::item:alternate {
+	background: #EEEEEE;
+}
+QListView::item:selected {
+	/*border: 1px solid #6a6ea9;*/
+}
+QListView::item:selected:!active {
+	/*background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #ABAFE5, stop: 1 #8588B2);*/
+	background-color: transparent;
+}
+QListView::item:selected:active {
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #6a6ea9, stop: 1 #888dd9);
+}
+QListView::item:hover {
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #FAFBFE, stop: 1 #DCDEF1);
+}
+
+QSplitter::handle {
+	background-color: transparent;
+}
+
+QGroupBox[qssGroup="GroupBoxNoBorder"] {
+	border: 0px;
+}
+
+QTextEdit[qssGroup="qssTip"] {
+	color: red;
+	background-color: transparent;
+	border: 0px;
+}
